@@ -1,3 +1,2 @@
 <?php
-include 'mail.php';
-sendEmail('danaoscompany@gmail.com', 'This is title', 'This is content');
+mail("danaoscompany@gmail.com", "My subject", "Hello world");
