@@ -28,7 +28,7 @@ sendEmail($email, 'Atur Ulang Kata Sandi', "
 <table width='100%' border='0' cellspacing='0' cellpadding='0'>
     <tr>
         <td align='center'>
-            <div onclick='window.location.href=\"http://" . HOST . "/prakuliah/reset-password.html?id=" . $resetID . "\"' style='background-image: linear-gradient(#4776E6, #8E54E9); padding-left: 20px; padding-right: 20px; padding-top: 15px; padding-bottom: 15px; border: 0; border-radius: 3px; color: white; font-size: 15px; cursor: pointer;'>Atur Ulang Kata Sandi</div>
+            <div onclick='window.location.href=\"http://" . HOST . "/prakuliah/reset-password.html?id=" . $resetID . "\"' style='background-image: linear-gradient(#4776E6, #8E54E9); width: 300px; padding-left: 20px; padding-right: 20px; padding-top: 15px; padding-bottom: 15px; border: 0; border-radius: 3px; color: white; font-size: 15px; cursor: pointer;'>Atur Ulang Kata Sandi</div>
         </td>
     </tr>
 </table>
