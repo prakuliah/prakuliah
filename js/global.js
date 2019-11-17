@@ -1,6 +1,6 @@
 const HOST = "139.99.22.150/prakuliah";
 //const HOST = "localhost/prakuliah";
-const PHP_URL = "http://"+HOST+"/php/";
+const PHP_URL = "https://"+HOST+"/php/";
 
 function validatePassword(str) {
     // at least one number, one lowercase and one uppercase letter
