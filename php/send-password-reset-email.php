@@ -6,11 +6,11 @@ include 'common.php';
 $email = "danaoscompany@gmail.com";
 echo "This line 1<br/>";
 $results = $c->query("SELECT * FROM users WHERE email='" . $email . "'");
-/*if (!$results || $results->num_rows <=0) {
+if (!$results || $results->num_rows <=0) {
 	// Email not registered
 	echo -1;
 	return;
-}*/
+}
 echo "This line 2<br/>";
 $row = $results->fetch_assoc();
 echo "This line 3<br/>";
@@ -19,7 +19,7 @@ echo "Name: " . $name . "<br/>";
 $resetID = "" . time() . "-" . generateUUID();
 echo "Reset ID: " . $resetID . "<br/>";
 $c->query("UPDATE users SET email_reset_id='" . $resetID . "' WHERE id=" . $row["id"]);
-/*sendEmail('danaoscompany@gmail.com', 'Atur Ulang Kata Sandi', "
+sendEmail($email, 'Atur Ulang Kata Sandi', "
 <div style='display: flex; width: 100%; align-items: center; flex-flow: column nowrap; margin-top: 20px; font-family: Helvetica; line-height: 25px;'>
 	<div style='font-size: 25px; color: black; font-family: Helvetica;'>Atur ulang kata sandi Anda</div>
 	<br/>
@@ -41,5 +41,4 @@ $c->query("UPDATE users SET email_reset_id='" . $resetID . "' WHERE id=" . $row[
 		<div style='margin-left: 10px; color: #000000;'>© " . date('Y') . " Prakuliah.com</div>
 	</div>
 </div>
-");*/
-sendEmail('danaoscompany@gmail.com', 'Atur Ulang Kata Sandi', "Halo dunia");
+");
