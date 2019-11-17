@@ -18,7 +18,7 @@ sendEmail($email, 'Atur Ulang Kata Sandi', "
 <table width='100%' border='0' cellspacing='0' cellpadding='0'>
     <tr>
         <td align='center'>
-            <div style='font-size: 25px; color: black; font-family: Helvetica;'>Atur ulang kata sandi Anda</div>
+            <div style='font-size: 25px; color: black; font-family: Helvetica; margin-top: 20px;'>Atur ulang kata sandi Anda</div>
         </td>
     </tr>
 </table>
