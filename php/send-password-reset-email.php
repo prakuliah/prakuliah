@@ -56,12 +56,10 @@ sendEmail($email, 'Atur Ulang Kata Sandi', "
 <table width='100%' border='0' cellspacing='0' cellpadding='0'>
     <tr>
         <td align='center'>
-            <div onclick='window.location.href=\"https://prakuliah.com\"' style='color: #3498db; cursor: pointer;'>prakuliah.com</div>
-            <div style='margin-left: 10px;'>|</div>
+            <div onclick='window.location.href=\"https://prakuliah.com\"' style='color: #3498db; cursor: pointer; text-decoration: none;'>prakuliah.com   |    </div>
         </td>
         <td align='center'>
-            <div onclick='window.location.href=\"http://" . HOST . "/prakuliah/privacy_policy.html\"' style='margin-left: 10px; color: #3498db; cursor: pointer;'>Kebijakan Privasi</div>
-            <div style='margin-left: 10px;'>|</div>
+            <div onclick='window.location.href=\"http://" . HOST . "/prakuliah/privacy_policy.html\"' style='margin-left: 10px; color: #3498db; cursor: pointer; text-decoration: none;'>Kebijakan Privasi   |   </div>
         </td>
         <td align='center'>
             <div style='margin-left: 10px; color: #000000;'>© " . date('Y') . " Prakuliah.com</div>
