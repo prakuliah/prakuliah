@@ -14,7 +14,7 @@ $row = $results->fetch_assoc();
 $name = $row["first_name"] . " " . $row["last_name"];
 $resetID = "" . time() . "-" . generateUUID();
 $c->query("UPDATE users SET email_reset_id='" . $resetID . "' WHERE id=" . $row["id"]);
-sendEmail('danaoscompany@gmail.com', 'Atur Ulang Kata Sandi', "
+/*sendEmail('danaoscompany@gmail.com', 'Atur Ulang Kata Sandi', "
 <div style='display: flex; width: 100%; align-items: center; flex-flow: column nowrap; margin-top: 20px; font-family: Helvetica; line-height: 25px;'>
 	<div style='font-size: 25px; color: black; font-family: Helvetica;'>Atur ulang kata sandi Anda</div>
 	<br/>
@@ -36,4 +36,5 @@ sendEmail('danaoscompany@gmail.com', 'Atur Ulang Kata Sandi', "
 		<div style='margin-left: 10px; color: #000000;'>© " . date('Y') . " Prakuliah.com</div>
 	</div>
 </div>
-");
+");*/
+sendEmail('danaoscompany@gmail.com', 'Atur Ulang Kata Sandi', "Halo dunia");
