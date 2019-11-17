@@ -5,11 +5,11 @@ include 'uuid.php';
 include 'common.php';
 $email = $_GET["email"];
 $results = $c->query("SELECT * FROM users WHERE email='" . $email . "'");
-if (!$results || $results->num_rows <=0) {
+/*if (!$results || $results->num_rows <=0) {
 	// Email not registered
 	echo -1;
 	return;
-}
+}*/
 $row = $results->fetch_assoc();
 $name = $row["first_name"] . " " . $row["last_name"];
 echo "Name: " . $name . "<br/>";
