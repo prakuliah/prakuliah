@@ -3,7 +3,7 @@ include 'db.php';
 include 'mail.php';
 include 'uuid.php';
 include 'common.php';
-/*$email = $_GET["email"];
+$email = $_GET["email"];
 $results = $c->query("SELECT * FROM users WHERE email='" . $email . "'");
 if (!$results || $results->num_rows <=0) {
 	// Email not registered
@@ -12,7 +12,9 @@ if (!$results || $results->num_rows <=0) {
 }
 $row = $results->fetch_assoc();
 $name = $row["first_name"] . " " . $row["last_name"];
+echo "Name: " . $name . "<br/>";
 $resetID = "" . time() . "-" . generateUUID();
+echo "Reset ID: " . $resetID . "<br/>";
 $c->query("UPDATE users SET email_reset_id='" . $resetID . "' WHERE id=" . $row["id"]);
 /*sendEmail('danaoscompany@gmail.com', 'Atur Ulang Kata Sandi', "
 <div style='display: flex; width: 100%; align-items: center; flex-flow: column nowrap; margin-top: 20px; font-family: Helvetica; line-height: 25px;'>
