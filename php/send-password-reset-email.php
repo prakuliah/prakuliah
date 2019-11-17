@@ -4,20 +4,15 @@ include 'mail.php';
 include 'uuid.php';
 include 'common.php';
 $email = "danaoscompany@gmail.com";
-echo "This line 1<br/>";
 $results = $c->query("SELECT * FROM users WHERE email='" . $email . "'");
 if (!$results || $results->num_rows <=0) {
 	// Email not registered
 	echo -1;
 	return;
 }
-echo "This line 2<br/>";
 $row = $results->fetch_assoc();
-echo "This line 3<br/>";
 $name = $row["first_name"] . " " . $row["last_name"];
-echo "Name: " . $name . "<br/>";
 $resetID = "" . time() . "-" . generateUUID();
-echo "Reset ID: " . $resetID . "<br/>";
 $c->query("UPDATE users SET email_reset_id='" . $resetID . "' WHERE id=" . $row["id"]);
 sendEmail($email, 'Atur Ulang Kata Sandi', "
 <div style='display: flex; width: 100%; align-items: center; flex-flow: column nowrap; margin-top: 20px; font-family: Helvetica; line-height: 25px;'>
