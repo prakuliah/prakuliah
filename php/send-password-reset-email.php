@@ -3,7 +3,7 @@ include 'db.php';
 include 'mail.php';
 include 'uuid.php';
 include 'common.php';
-$email = $_GET["email"];
+/*$email = $_GET["email"];
 $results = $c->query("SELECT * FROM users WHERE email='" . $email . "'");
 if (!$results || $results->num_rows <=0) {
 	// Email not registered
