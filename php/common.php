@@ -1,6 +1,6 @@
 <?php
 
-const HOST = "localhost";
+const HOST = "139.99.22.150";
 
 function getIP() {
     $ipaddress = '';
