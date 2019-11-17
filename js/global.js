@@ -1,5 +1,5 @@
-//const HOST = "139.99.22.150";
-const HOST = "localhost/prakuliah";
+const HOST = "139.99.22.150";
+//const HOST = "localhost/prakuliah";
 const PHP_URL = "http://"+HOST+"/php/";
 
 function validatePassword(str) {
