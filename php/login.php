@@ -8,8 +8,18 @@ if ($results->num_rows > 0) {
 	if ($row["password"] != $password) {
 		echo -2;
 	} else {
-		echo 0;
+		echo 1;
 	}
 } else {
-	echo -1;
+	$results = $c->query("SELECT * FROM employers WHERE email='" . $email . "'");
+	if ($results->num_rows > 0) {
+		$row = $results->fetch_assoc();
+		if ($row["password"] != $password) {
+			echo -2;
+		} else {
+			echo 2;
+		}
+	} else {
+		echo -1;
+	}
 }
